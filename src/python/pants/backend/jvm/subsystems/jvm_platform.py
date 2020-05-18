@@ -303,7 +303,7 @@ class JvmPlatform(Subsystem):
         :rtype: Revision
         """
         if not hasattr(version, "components"):
-            version = Revision.lenient(version)
+            version = Revision.lenient(str(version))
 
         if version.components[0] == 1:
             if version.components[1] > 8:
